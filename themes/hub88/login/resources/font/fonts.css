@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Sharp Sans";
+  src: url("../fonts/SharpSans-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sharp Sans";
+  src: url("../fonts/SharpSans-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sharp Sans";
+  src: url("../fonts/SharpSans-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}

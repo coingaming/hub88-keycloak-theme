@@ -1,0 +1,221 @@
+body {
+  background: #E9ECEE;
+  font-family: Averta Std,Segoe UI,-apple-system,Arial,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.kc-logo {
+  position: fixed;
+  width: 52px;
+  top: 52px;
+  left: 104px;
+}
+
+input[name="password"]::placeholder {
+  color: #8697A2;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.kc-content {
+  position: absolute;
+  top: 178px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.grey-circle-wrapper {
+  overflow: hidden;
+  max-height: 600px;
+  max-width: 800px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.grey-circle {
+  width: 2318.22px;
+  height: 2318.22px;
+  border-radius: 2318px;
+  background: #E4E7EA;
+  position: relative;
+  left: -172%;
+}
+
+.blue-circle-wrapper {
+  overflow: hidden;
+  max-width: 500px;
+  max-height: 200px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.blue-circle {
+  background: #1E2255;
+  width: 1021px;
+  height: 1021px;
+  border-radius: 1021px;
+}
+
+.dark-blue-circle-wrapper {
+  overflow: hidden;
+  max-width: 1006px;
+  max-height: 870px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.dark-blue-circle {
+  background: #263C8E;
+  width: 2318.22px;
+  height: 2318.22px;
+  right: -172%;
+  background: #263C8E;
+  right: 0px;
+  position: relative;
+  border-radius: 2318px;
+  top: -1440px;
+}
+
+.kc-label {
+  color: #010913;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.kc-input {
+  background: #F3F5F6;
+  border: 1px solid #E2E6E9;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.checkbox label {
+  font-size: 14px;
+  color: #8697A2;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox input {
+  width: 16px;
+  height: 16px;
+}
+
+.kc-input[aria-invalid="true"] {
+  border: 1px solid #FF4E64;
+}
+
+.kc-button {
+  border-radius: 8px;
+  height: 48px;
+  border: none;
+  cursor: pointer;
+}
+
+.kc-button-primary {
+  background: #1A5BFF;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.kc-form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.kc-form-buttons {
+  margin-top: 40px;
+}
+
+.kc-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  padding-top: 64px;
+  display: grid;
+  gap: 24px;
+  box-shadow: 0px 30px 100px -20px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+form {
+  border-radius: 16px;
+  display: grid;
+  gap: 24px;
+}
+
+.kc-form-wrapper {
+  background: #fff;
+  border-radius: 16px;
+  min-width: 480px;
+  min-height: 592px;
+  backdrop-filter: blur(30px);
+  box-sizing: border-box;
+}
+
+.kc-form-login {
+  display: grid;
+  gap: 24px;
+}
+
+.kc-form-header {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: #010913;
+  margin-bottom: 16px;
+}
+
+.kc-form-login-forgot {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+a {
+  font-size: 14px;
+  color: #1A5BFF;
+  text-decoration: none;
+}
+
+.kc-form-buttons {
+  margin-top: 12px;
+}
+
+
+.kc-input-error-message {
+  color: #FF4E64;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#kc-password {
+  position: relative;
+}
+
+#kc-password-eye {
+  position: absolute;
+  top: 40px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.kc-alert {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+}

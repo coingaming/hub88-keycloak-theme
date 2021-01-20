@@ -9,3 +9,4 @@ jboss/keycloak
 
 docker cp themes/hub88 keycloak-local:/opt/jboss/keycloak/themes/hub88
 docker cp keycloak-local:/opt/jboss/keycloak/standalone/configuration/standalone.xml .
+

@@ -1,0 +1,30 @@
+defaults: &defaults
+  working_directory: ~/hub88-bo-keycloak
+
+version: 2.1
+
+jobs:
+  build:
+    <<: *defaults
+    docker:
+      - image: docker:17.05.0-ce-git
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Login to docker
+          command: docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - run:
+          name: Building docker image
+          command: .circleci/docker-build.sh heathmont/hub88-bo-keycloak $CIRCLE_TAG
+      - run:
+          name: Push image to docker hub
+          command: .circleci/docker-push.sh heathmont/hub88-bo-keycloak $CIRCLE_TAG
+
+
+workflows:
+  version: 2
+  test-n-build:
+    jobs:
+      - build:
+          context: global

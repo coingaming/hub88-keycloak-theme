@@ -28,3 +28,6 @@ workflows:
     jobs:
       - build:
           context: global
+          filters:
+            tags:
+              only: /.*/

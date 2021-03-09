@@ -162,9 +162,10 @@ form {
   background: #fff;
   border-radius: 16px;
   min-width: 480px;
-  min-height: 592px;
+  min-height: 512px;
   backdrop-filter: blur(30px);
   box-sizing: border-box;
+  position: relative;
 }
 
 .kc-form-login {

@@ -101,7 +101,6 @@ input[name="password"]::placeholder {
   font-size: 14px;
   color: #8697A2;
   display: flex;
-  gap: 12px;
   align-items: center;
   cursor: pointer;
 }
@@ -109,6 +108,7 @@ input[name="password"]::placeholder {
 .checkbox input {
   width: 16px;
   height: 16px;
+  margin-right: 12px;
 }
 
 .kc-input[aria-invalid="true"] {

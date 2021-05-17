@@ -95,6 +95,7 @@ input[name="password"]::placeholder {
   box-sizing: border-box;
   border-radius: 8px;
   padding: 12px 16px;
+  width: 100%;
 }
 
 .checkbox label {
@@ -162,13 +163,13 @@ form {
   background: #fff;
   border-radius: 16px;
   min-width: 480px;
-  min-height: 512px;
+  height: auto;
   backdrop-filter: blur(30px);
   box-sizing: border-box;
   position: relative;
 }
 
-.kc-form-login {
+.kc-form {
   display: grid;
   gap: 24px;
 }
@@ -193,11 +194,6 @@ a {
   color: #1A5BFF;
   text-decoration: none;
 }
-
-.kc-form-buttons {
-  margin-top: 12px;
-}
-
 
 .kc-input-error-message {
   color: #FF4E64;

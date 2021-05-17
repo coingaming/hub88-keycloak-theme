@@ -5,7 +5,7 @@
     <div id="kc-form">
       <div id="kc-form-wrapper" class="kc-form-wrapper">
         <#if realm.password>
-            <form id="kc-form-login" class="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+            <form id="kc-form-login" class="${properties.kcFormClass!}" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                 <header class="kc-form-header">${msg("loginAccountTitle")}</header>
                 <div class="${properties.kcFormGroupClass!}">
                     <label for="username" class="${properties.kcLabelClass!}"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if></label>
@@ -16,13 +16,6 @@
                         <input tabindex="1" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}"  type="text" autofocus autocomplete="off"
                                aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"
                         />
-
-                        <#if messagesPerField.existsError('username','password')>
-                            <span id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
-                              <img src="${url.resourcesPath}/img/info.png" />
-                                    ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
-                            </span>
-                        </#if>
                     </#if>
                 </div>
 
@@ -31,29 +24,33 @@
 
                     <input tabindex="2" id="password" class="${properties.kcInputClass!}" name="password" type="password" autocomplete="off"
                            aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"
-                           placeholder="Enter 6 characters or more"
+                           placeholder="Enter your password here"
                     />
                     <img id="kc-password-eye" src="${url.resourcesPath}/img/no_eye.png" />
                 </div>
 
-                <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
-                    <div id="kc-form-options">
-                        <#if realm.rememberMe && !usernameEditDisabled??>
-                            <div class="checkbox">
-                                <label>
-                                    <#if login.rememberMe??>
-                                        <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox" checked> ${msg("rememberMe")}
-                                    <#else>
-                                        <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox"> ${msg("rememberMe")}
-                                    </#if>
-                                </label>
-                            </div>
-                        </#if>
-                        </div>
-                        <div class="${properties.kcFormOptionsWrapperClass!}">
-                        </div>
+                <#if messagesPerField.existsError('username','password')>
+                    <span id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
+                        <img src="${url.resourcesPath}/img/info.png" />
+                            ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
+                    </span>
+                </#if>
 
-                  </div>
+                <#if realm.rememberMe && !usernameEditDisabled??>
+                    <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
+                        <div id="kc-form-options">
+                                <div class="checkbox">
+                                    <label>
+                                        <#if login.rememberMe??>
+                                            <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox" checked> ${msg("rememberMe")}
+                                        <#else>
+                                            <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox"> ${msg("rememberMe")}
+                                        </#if>
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                </#if>
 
                   <div id="kc-form-buttons" class="kc-form-buttons ${properties.kcFormGroupClass!}">
                       <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>

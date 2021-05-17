@@ -35,6 +35,7 @@
                                 <li>A <b>number</b></li>
                                 <li>A <b>special character</b></li>
                                 <li>Minimum <b>8 characters</b></li>
+                                <li>Cannot be as a <b>username</b> or <b>email</b></li>
                             </ul>
                         </div>
                     </div>

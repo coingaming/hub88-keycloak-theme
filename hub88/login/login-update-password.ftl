@@ -23,22 +23,9 @@
                 </div>
 
                 <#if messagesPerField.existsError('password')>
-                    <div id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
-                        <div>
-                            <div class="${properties.kcInputErrorMessageClass!}">
-                                <img src="${url.resourcesPath}/img/info.png" />
-                                <span>Password must contain the following:</span>
-                            </div>
-                            <ul>
-                                <li>A <b>lowercase</b> letter</li>
-                                <li>A <b>capital (uppercase)</b> letter</li>
-                                <li>A <b>number</b></li>
-                                <li>A <b>special character</b></li>
-                                <li>Minimum <b>8 characters</b></li>
-                                <li>Cannot be as a <b>username</b> or <b>email</b></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <span id="input-error-password" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
+                        ${kcSanitize(messagesPerField.get('password'))?no_esc}
+                    </span>
                 </#if>
 
                 <div class="${properties.kcFormGroupClass!}">
@@ -59,6 +46,23 @@
                         ${kcSanitize(messagesPerField.get('password-confirm'))?no_esc}
                     </span>
                 </#if>
+
+                <div id="input-error" class="${properties.kcInputMessageClass!}" aria-live="polite">
+                    <div>
+                        <div class="${properties.kcInputMessageClass!}">
+                            <img src="${url.resourcesPath}/img/info.png" />
+                            <span>Password must contain the following:</span>
+                        </div>
+                        <ul>
+                            <li>A <b>lowercase</b> letter</li>
+                            <li>A <b>capital (uppercase)</b> letter</li>
+                            <li>A <b>number</b></li>
+                            <li>A <b>special character</b></li>
+                            <li>Minimum <b>8 characters</b></li>
+                            <li>Cannot be as a <b>username</b> or <b>email</b></li>
+                        </ul>
+                    </div>
+                </div>
 
                 <div class="${properties.kcFormGroupClass!}">
                     <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">

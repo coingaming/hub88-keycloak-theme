@@ -202,6 +202,12 @@ a {
   gap: 8px;
 }
 
+.kc-input-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 #kc-password {
   position: relative;
 }

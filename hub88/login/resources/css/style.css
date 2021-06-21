@@ -183,10 +183,7 @@ form {
 }
 
 .kc-form-login-forgot {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
 }
 
 a {

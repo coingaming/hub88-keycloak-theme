@@ -37,9 +37,9 @@
 
 <body class="${properties.kcBodyClass!}">
     <div class="background">
-        <div class="circle grey-circle"></div>
-        <div class="circle blue-circle"></div>
-        <div class="circle dark-blue-circle"></div>
+        <div class="circle grey-c"></div>
+        <div class="circle blue-c"></div>
+        <div class="circle dark-blue-c"></div>
     </div>
     <div class="${properties.kcLoginClass!}">
         <div id="kc-header" class="${properties.kcHeaderClass!}">

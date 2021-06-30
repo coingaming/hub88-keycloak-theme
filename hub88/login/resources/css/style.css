@@ -44,21 +44,21 @@ input[name="password"]::placeholder {
   top: 50%;
 }
 
-.grey-circle {
+.grey-c {
   width: 138%;
   padding-bottom: 138%;
   background: #E4E7EA;
   transform: translate(-88%, -8%);
 }
 
-.blue-circle {
+.blue-c {
   width: 61%;
   padding-bottom: 61%;
   background: #1E2255;
   transform: translate(40%, 31%);
 }
 
-.dark-blue-circle {
+.dark-blue-c {
   width: 138%;
   padding-bottom: 138%;
   background: #263C8E;

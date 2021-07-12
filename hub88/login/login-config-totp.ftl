@@ -4,7 +4,7 @@
     <#if section = "header">
     <#elseif section = "form">
 
-        <header class="kc-form-header">${msg("loginTotpTitle")}</header>
+        <header class="${properties.kcFormHeaderClass!}">${msg("loginTotpTitle")}</header>
         <ol id="kc-totp-settings">
             <li>
                 <p>${msg("loginTotpStep1")}</p>
@@ -15,7 +15,6 @@
                     </#list>
                 </ul>
             </li>
-
             <#if mode?? && mode = "manual">
                 <li>
                     <p>${msg("loginTotpManualStep2")}</p>

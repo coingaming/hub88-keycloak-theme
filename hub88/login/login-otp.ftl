@@ -4,7 +4,7 @@
             <#elseif section="form">
                 <form id="kc-otp-login-form" class="${properties.kcFormClass!}" action="${url.loginAction}"
                     method="post">
-                    <header class="kc-form-header">
+                    <header class="${properties.kcFormHeaderClass!}">
                       ${msg("doLogIn")}
                     </header>
                     <#if otpLogin.userOtpCredentials?size gt 1>
@@ -43,19 +43,19 @@
                     </div>
                 </div>
 
-                    <div class="${properties.kcFormGroupClass!}">
-                        <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
-                            <div class="${properties.kcFormOptionsWrapperClass!}">
-                            </div>
-                        </div>
-
-                        <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
-                            <input
-                                class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"
-                                name="login" id="kc-login" type="submit" value="${msg("doLogIn")}" />
+                <div class="${properties.kcFormGroupClass!}">
+                    <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
+                        <div class="${properties.kcFormOptionsWrapperClass!}">
                         </div>
                     </div>
-                </form>
+
+                    <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
+                        <input
+                            class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"
+                            name="login" id="kc-login" type="submit" value="${msg("doLogIn")}" />
+                    </div>
+                </div>
+            </form>
             <script type="text/javascript" src="${url.resourcesCommonPath}/node_modules/jquery/dist/jquery.min.js"></script>
             <script type="text/javascript">
             $(document).ready(function() {

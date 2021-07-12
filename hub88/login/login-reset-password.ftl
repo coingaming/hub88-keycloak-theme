@@ -4,7 +4,7 @@
     <#elseif section = "form">
         <form id="kc-reset-password-form" class="${properties.kcFormClass!}" action="${url.loginAction}" method="post">
             <span><a href="${url.loginUrl}">${kcSanitize(msg("backToLogin"))?no_esc}</a></span>
-            <header class="kc-form-header">${msg("emailForgotTitle")}</header>
+            <header class="${properties.kcFormHeaderClass!}">${msg("emailForgotTitle")}</header>
 
             <span>${msg("emailInstruction")}</span>
             <div class="${properties.kcFormGroupClass!}">
